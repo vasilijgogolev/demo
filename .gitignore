@@ -7,3 +7,4 @@ tests_executable
 tests_executable.exe
 tests_executable.pdb
 tests_executable.ink
+.idea/
