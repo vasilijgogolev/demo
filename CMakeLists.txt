@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.9.0)
+cmake_minimum_required(VERSION 3.18.0 FATAL_ERROR)
 project(demo)
 set(CMAKE_CXX_STANDARD 17)
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
@@ -29,9 +29,11 @@ endif(LINUX)
 
 file(GLOB_RECURSE SOURCES "src/*.*")
 
+add_subdirectory(engine)
+
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-#target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} engine)
 set_target_properties(${PROJECT_NAME} PROPERTIES
 	RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}
 	RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_SOURCE_DIR}

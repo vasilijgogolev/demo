@@ -2,9 +2,9 @@ build/
 demo
 demo.exe
 demo.pdb
-demo.ink
+demo.ilk
 tests_executable
 tests_executable.exe
 tests_executable.pdb
-tests_executable.ink
+tests_executable.ilk
 .idea/

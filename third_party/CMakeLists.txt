@@ -1,1 +1,0 @@
-project(third_party)
